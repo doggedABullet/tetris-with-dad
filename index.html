@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        #tetris {
+            border: 1px solid #fff;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="tetris" width="240" height="400"></canvas>
+    <script>
+        const canvas = document.getElementById('tetris');
+        const context = canvas.getContext('2d');
+        context.scale(20, 20);
+
+        function drawSquare(x, y) {
+            context.fillStyle = '#fff';
+            context.fillRect(x, y, 1, 1);
+        }
+
+        // Tetris game logic goes here
+        // You can include Tetris game code, handling shapes, rotation, lines clearing, etc.
+        // Example placeholder
+        function draw() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            drawSquare(5, 5);
+            // Additional game drawing code goes here...
+        }
+
+        setInterval(draw, 1000);
+    </script>
+</body>
+</html>
