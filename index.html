@@ -3,44 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tetris Game</title>
+    <title>Tetris with Dad</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="game.js" defer></script>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #000;
-            color: #fff;
-            font-family: Arial, sans-serif;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
         }
-        #tetris {
-            border: 1px solid #fff;
+        #score {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        #instructions {
+            font-size: 20px;
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
-    <canvas id="tetris" width="240" height="400"></canvas>
-    <script>
-        const canvas = document.getElementById('tetris');
-        const context = canvas.getContext('2d');
-        context.scale(20, 20);
-
-        function drawSquare(x, y) {
-            context.fillStyle = '#fff';
-            context.fillRect(x, y, 1, 1);
-        }
-
-        // Tetris game logic goes here
-        // You can include Tetris game code, handling shapes, rotation, lines clearing, etc.
-        // Example placeholder
-        function draw() {
-            context.clearRect(0, 0, canvas.width, canvas.height);
-            drawSquare(5, 5);
-            // Additional game drawing code goes here...
-        }
-
-        setInterval(draw, 1000);
-    </script>
+    <h1>Tetris with Dad</h1>
+    <div id="score">Score: 0</div>
+    <div id="instructions">
+        <h2>Instructions:</h2>
+        <p>Use the arrow keys to move the Tetris blocks. Rotate with the up arrow and pause with the spacebar.</p>
+    </div>
+    <div id="game-container"></div>
 </body>
 </html>
